@@ -2,4 +2,11 @@
 set -e
 [ -n "$PHPENV_DEBUG" ] && set -x
 
-exec man -M "$(phpenv-prefix)/share/man:${MANPATH}" "$@"
+PHPENV_PREFIX_MANPATH="$(phpenv-prefix)/share/man:${MANPATH}"
+
+for plugin_dir in "$(phpenv-root)/plugins/"*; do
+	[ -d "$plugin_dir/man" ] && PHPENV_PREFIX_MANPATH="$plugin_dir/man:${PHPENV_PREFIX_MANPATH}"
+	[ -d "$plugin_dir/share/man" ] && PHPENV_PREFIX_MANPATH="$plugin_dir/share/man:${PHPENV_PREFIX_MANPATH}"
+done
+
+exec man -M "${PHPENV_PREFIX_MANPATH}" "$@"
