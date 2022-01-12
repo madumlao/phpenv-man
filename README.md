@@ -1,68 +1,59 @@
-rbenv-man
+phpenv-man
 =========
 
-rbenv-man is a plugin for [rbenv] to easily access the man pages for the
+phpenv-man is a plugin for [phpenv] to easily access the man pages for the
 currently set Ruby version, e.g. `ruby(1)` and `irb(1)`.
 
-Technically, rbenv-man is a wrapper for `man(1)` that takes care of using the
+Technically, phpenv-man is a wrapper for `man(1)` that takes care of using the
 correct manpath.
-
-Note: To view a gem's man page, install [gem-man].
-
 
 Installation
 ------------
 
-To install rbenv-man, clone this repository into your `~/.rbenv/plugins`
-directory. (You'll need a recent version of rbenv that supports plugin
+To install phpenv-man, clone this repository into your `~/.phpenv/plugins`
+directory. (You'll need a recent version of phpenv that supports plugin
 bundles.)
 
-    $ mkdir -p "$(rbenv root)/plugins"
-    $ git clone https://github.com/mlafeldt/rbenv-man.git "$(rbenv root)/plugins/rbenv-man"
+    $ mkdir -p "$(phpenv root)/plugins"
+    $ git clone https://github.com/madumlao/phpenv-man.git "$(phpenv root)/madumlao/phpenv-man"
 
 
 Usage
 -----
 
-Simply use rbenv-man in the same way as your system's `man(1)` program. All
+Simply use phpenv-man in the same way as your system's `man(1)` program. All
 command-line options are passed through to it.
 
 Some examples:
 
-* Show `ruby(1)` manual:
+* Show `php(1)` manual:
 
-        $ rbenv man ruby
+        $ phpenv man php
 
-* Show `ri(1)` manual:
+* Show `phar(1)` manual:
 
-        $ rbenv man 1 ri
+        $ phpenv man 1 phar
 
-* Print location of `ruby(1)` manual:
+* Print location of `php(1)` manual:
 
-        $ rbenv man -w ruby
-        /home/mlafeldt/.rbenv/versions/1.9.2-p290/share/man/man1/ruby.1
+        $ phpenv man -w php
+        /home/madumlao/.phpenv/versions/7.4/share/man/man1/php.1
 
-* Change Ruby version and print new location of man page:
+* Change PHP version and print new location of man page:
 
-        $ rbenv global 1.9.3-p0
-        $ rbenv man -w ruby
-        /home/mlafeldt/.rbenv/versions/1.9.3-p0/share/man/man1/ruby.1
+        $ phpenv global 7.3.25
+        $ phpenv man -w php
+        /home/mlafeldt/.phpenv/versions/7.3.24/share/man/man1/php.1
 
 
 License
 -------
 
-rbenv-man does not reach the [threshold of originality], so no license is needed.
+phpenv-man does not reach the [threshold of originality], so no license is needed.
+
+phpenv-man is based on [rbenv-man].
 
 
-Contact
--------
-
-* Web: <https://github.com/mlafeldt/rbenv-man>
-* Mail: <mathias.lafeldt@gmail.com>
-* Twitter: [@mlafeldt](https://twitter.com/mlafeldt)
-
-
-[gem-man]: https://github.com/defunkt/gem-man
-[rbenv]: https://github.com/sstephenson/rbenv
+[phpenv]: https://github.com/phpenv/phpenv
+[rbenv-man]: https://github.com/mlafeldt/rbenv-man
 [threshold of originality]: http://en.wikipedia.org/wiki/Threshold_of_originality
