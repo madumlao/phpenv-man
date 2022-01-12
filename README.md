@@ -2,7 +2,7 @@ phpenv-man
 =========
 
 phpenv-man is a plugin for [phpenv] to easily access the man pages for the
-currently set Ruby version, e.g. `ruby(1)` and `irb(1)`.
+currently set PHP version, e.g. `php(1)` and `phar(1)`.
 
 Technically, phpenv-man is a wrapper for `man(1)` that takes care of using the
 correct manpath.
