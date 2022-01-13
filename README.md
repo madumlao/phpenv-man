@@ -2,7 +2,8 @@ phpenv-man
 =========
 
 phpenv-man is a plugin for [phpenv] to easily access the man pages for the
-currently set PHP version, e.g. `php(1)` and `phar(1)`.
+currently set PHP version, e.g. `php(1)` and `phar(1)`, and phpenv plugins
+such as` [php-build](1)`.
 
 Technically, phpenv-man is a wrapper for `man(1)` that takes care of using the
 correct manpath.
@@ -34,6 +35,11 @@ Some examples:
 
         $ phpenv man 1 phar
 
+* Show `php-build(1)` manual:
+
+        $ phpenv man 1 php-build
+
+
 * Print location of `php(1)` manual:
 
         $ phpenv man -w php
@@ -57,3 +63,4 @@ phpenv-man is based on [rbenv-man].
 [phpenv]: https://github.com/phpenv/phpenv
 [rbenv-man]: https://github.com/mlafeldt/rbenv-man
 [threshold of originality]: http://en.wikipedia.org/wiki/Threshold_of_originality
+[php-build]: https://github.com/php-build/php-build
